@@ -14,7 +14,7 @@
 body {
     background-color: var(--color-base2);
     color:  var(--color-body);
-    font-family: var(--font-base) sans-serif;
+    font-family: var(--font-base), sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -35,3 +35,29 @@ a:hover {
 img {
     width: 100%;
 }
+/* NAVBAR */
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3,63,71,0.9), rgba(3,63,71,0.9)), url(../images/sidebar-img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-body) ;
+    }
+}
+
