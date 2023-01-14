@@ -13,7 +13,7 @@
 </head>
 
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
 
     <!--NAVBAR-->
 
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Serviços</a>
+                        <a class="nav-link" href="#tecnologias">Tecnologias</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projetos">Projetos</a>
@@ -61,11 +61,13 @@
         <section id="home" class="full-height px-lg-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <h1 class="display-1 fw-bold">Desenvolvedor <span class="text-brand">Front-End</span></h1>
-                        <p class="lead mt-2 mb-4">Hello, World! Eu sou Eduardo Lima, busco colaborar com projetos em Front-end.</p>
-                        <a href="projetos.html" class="btn btn-brand me-3">Projetos</a>
-                        <a href="https://api.whatsapp.com/send?phone=5592991887687&text=Ol%C3%A1!" target="_blank" class="link-custom">Call: (92) 99188-7687</a>
+                    <div class="col-lg-10">
+                        <h1 class="display-1 fw-bold" data-aos="fade-up" >Desenvolvedor <span class="text-brand">Front-End</span></h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Hello, World! Eu sou Eduardo Lima, busco colaborar com projetos em Front-end.</p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#projetos" class="btn btn-brand me-3">Projetos</a>
+                            <a href="https://api.whatsapp.com/send?phone=5592991887687&text=Ol%C3%A1!" target="_blank" class="link-custom">Call: (92) 99188-7687</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,22 +75,44 @@
         <!--//HOME-->
 
         <!--SERVICES-->
-        <section id="servises" class="full-height px-lg-5">
+        <section id="servises" class="full-height px-lg-5" >
             <div class="container">
-                <div class="row pb-4">
+                <div class="row pb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="col-lg-8">
-                        <h6 class="text-brand">Serviços</h6>
-                        <h1>Services That I Provice</h1>
+                        <h6 class="text-brand" id="tecnologias">Tecnologias</h6>
+                        <h1>Conhecimentos Tecnológicos</h1>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" data-aos="fade-up" data-aos-delay="300">
                     <div class="col-md-4">
-                        <div class="servise">
-                            <div class="iconbox">
-                                <i class="las la-feather"></i>
+                        <div class="servise p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="lab la-html5"></i>
                             </div>
-                            <h4>Branding</h4>
+                            <h4 class="mt-4 mb-2">HTML</h4>
+                            <p>É uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="servise p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="lab la-css3-alt"></i>
+                            </div>
+                            <h4 class="mt-4 mb-2">CSS</h4>
+                            <p>é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags style.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
+                        <div class="servise p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="lab la-bootstrap"></i>
+                            </div>
+                            <h4 class="mt-4 mb-2">Bootstrap</h4>
+                            <p>É um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para aplicações web.</p>
+                            
                         </div>
                     </div>
                 </div>
