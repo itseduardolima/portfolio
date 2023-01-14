@@ -1,23 +1,27 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfólio - Eduardo Lima</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+</head>
 
 
 <body>
 
     <!--NAVBAR-->
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
             <a class="navbar-brand mx-lg-brand mb-lg-4" href="#">
                 <span class="h3 fw-bold d-block d-lg-none">Eduardo Lima</span>
-            <img src="./assets/images/person.JPG" class="d-none d-lg-block rounded-circle" alt="Eduardo-Lima">
+                <img src="./assets/images/person.JPG" class="d-none d-lg-block rounded-circle" alt="Eduardo-Lima">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,33 +30,80 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
                     <li class="nav-item ">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="#services">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="work.html">Work</a>
+                        <a class="nav-link" href="#projetos">Projetos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="https://github.com/itseduardolima" target="_blank">Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/eduardolima07/" target="_blank">Linkedin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=5592991887687&text=Ol%C3%A1!" target="_blank">Contato</a>
                     </li>
 
                 </ul>
             </div>
         </div>
     </nav>
+    <!--//NAVBAR-->
 
     <!--CONTENT WRAPPER-->
+    <div id="content-wrapper">
+
+        <!--HOME-->
+        <section id="home" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="display-1 fw-bold">Desenvolvedor <span class="text-brand">Front-End</span></h1>
+                        <p class="lead mt-2 mb-4">Hello, World! Eu sou Eduardo Lima, busco colaborar com projetos em Front-end.</p>
+                        <a href="projetos.html" class="btn btn-brand me-3">Projetos</a>
+                        <a href="https://api.whatsapp.com/send?phone=5592991887687&text=Ol%C3%A1!" target="_blank" class="link-custom">Call: (92) 99188-7687</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//HOME-->
+
+        <!--SERVICES-->
+        <section id="servises" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Serviços</h6>
+                        <h1>Services That I Provice</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="servise">
+                            <div class="iconbox">
+                                <i class="las la-feather"></i>
+                            </div>
+                            <h4>Branding</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//SERVICES-->
+
+    </div>
+
+    <!--//CONTENT WRAPPER-->
 
     <script src="./assets/js/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
