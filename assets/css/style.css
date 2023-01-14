@@ -113,13 +113,14 @@ img {
     #content-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
         margin-right: 50vw;
+        padding-right: 55vw;
     }
     
    
 }
+
 
 /* CONTENT WRAPPER */
 
