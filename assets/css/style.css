@@ -10,10 +10,9 @@
     --sidbar-width:240px;
     --font-base: "Bai Jamjuree";
 }
-
 body {
     background-color: var(--color-base2);
-    color:  var(--color-body);
+    color: var(--color-body);
     font-family: var(--font-base), sans-serif;
 }
 
@@ -52,7 +51,7 @@ img {
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
 }
 
 .shadow-effect {
@@ -62,7 +61,6 @@ img {
 .shadow-effect:hover {
     box-shadow: -6px 6px 0 0 var(--color-brand);
 }
-
 
 .iconbox {
     width: 60px;
@@ -76,7 +74,6 @@ img {
 }
 
 /* NAVBAR */
-
 .navbar {
     background-color: var(--color-base);
 }
@@ -84,11 +81,11 @@ img {
 .navbar .nav-link {
     font-weight: 700;
     text-transform: uppercase;
-    color: fff;
+    color: #fff;
 }
 
 .navbar .nav-link:hover {
-    color: var(--color-brand);
+    color: var(--color-base2);
 }
 
 .navbar .nav-link.active {
@@ -99,40 +96,22 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(28, 37, 64, 0.575), #0D1526 ), url(../images/sidebar-img.jpg);
+        background: linear-gradient(rgba(28, 37, 64, 0.61), rgba(28, 37, 64, 0.767)), url(../images/sidebar-img.jpg);
         background-size: cover;
         background-position: center;
     }
 
     .navbar-brand img {
-        border: 8px solid var(--color-body) ;
+        border: 8px solid var(--color-brand);
     }
-}
 
-@media (max-width: 767px) {
+    /* CONTENT WRAPPER */
     #content-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-right: 50vw;
-        padding-right: 65vw;
-
+        padding-left: var(--sidbar-width);
     }
-    
-   .bg-base {
-    width: 320px;
-   }
-}
-
-
-/* CONTENT WRAPPER */
-
-#content-wrapper {
-    padding-left: var(--sidbar-width);
 }
 
 /* BTN */
-
 .btn {
     padding: 12px 28px;
     font-weight: 700;
@@ -171,8 +150,7 @@ img {
     width: 100%;
 }
 
-/* CARD CUSTOM */
-
+/* CARD */
 .card-custom .card-custom-image {
     overflow: hidden;
 }
@@ -183,4 +161,20 @@ img {
 
 .card-custom:hover .card-custom-image img {
     transform: scale(1.1);
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
 }
