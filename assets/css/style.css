@@ -130,6 +130,11 @@ img {
     border-color: var(--color-brand2);
 }
 
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
 .link-custom {
     font-weight: 700;
     position: relative;
