@@ -18,4 +18,4 @@ Portfólio criado para exibir meus projetos.
 </div>
 
 ## Link
-<a href="https://itseduardolima.github.io./portfolio/index.html">Acessar</a>
+<a href="https://eduardolima.netlify.app/">Acessar</a>
