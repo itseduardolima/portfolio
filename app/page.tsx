@@ -11,6 +11,8 @@ import { Footer } from "@/components/Footer";
 import { skillsData } from "@/mock/skillsData";
 import { experienceData } from "@/mock/experiencesData";
 import { projectData } from "@/mock/projectsData";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,13 +61,10 @@ export default function Page() {
           id="experience"
           experience={experienceData}
         />
-        <SkillsSection
-          fadeInUp={fadeInUp}
-          id="skills"
-          skills={skillsData}
-        />
+        <SkillsSection fadeInUp={fadeInUp} id="skills" skills={skillsData} />
       </main>
       <Footer id="contact" />
+      <ToastContainer />
     </div>
   );
 }
