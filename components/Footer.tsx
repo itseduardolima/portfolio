@@ -17,7 +17,7 @@ export function Footer({ id }: FooterProps) {
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    
     const form = e.currentTarget;
     if (!form.checkValidity()) {
       form.reportValidity();
@@ -55,9 +55,7 @@ export function Footer({ id }: FooterProps) {
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="text-3xl font-bold text-teal-400">
-              Entre em Contato
-            </h2>
+            <h2 className="text-3xl font-bold text-teal-400">Entre em contato comigo</h2>
             <form className="space-y-4" onSubmit={sendEmail}>
               <Input
                 placeholder="Nome"
@@ -84,13 +82,7 @@ export function Footer({ id }: FooterProps) {
                 className="w-full bg-teal-600 hover:bg-teal-700 text-white"
                 disabled={isLoading}
               >
-                {isLoading ? (
-                  "Enviando..."
-                ) : (
-                  <>
-                    <Send className="mr-2 h-4 w-4" /> Enviar Mensagem
-                  </>
-                )}
+                {isLoading ? "Enviando..." : <><Send className="mr-2 h-4 w-4" /> Enviar Mensagem</>}
               </Button>
             </form>
           </motion.div>
@@ -101,9 +93,7 @@ export function Footer({ id }: FooterProps) {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="text-3xl font-bold text-teal-400">
-              Entre em contato comigo
-            </h2>
+            <h2 className="text-3xl font-bold text-teal-400">Conecte-se</h2>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/itseduardolima"
@@ -122,7 +112,9 @@ export function Footer({ id }: FooterProps) {
                 <Linkedin className="h-8 w-8" />
               </a>
             </div>
-            <p className="text-gray-400">&copy; Design by Eduardo Lima</p>
+            <p className="text-gray-400">
+              &copy; Design by Eduardo Lima
+            </p>
           </motion.div>
         </div>
       </div>
