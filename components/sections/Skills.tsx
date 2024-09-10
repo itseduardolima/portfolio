@@ -2,16 +2,21 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skills } from "@/mock/skillsData";
+import { useRef } from "react";
 
 interface SkillsSectionProps {
   fadeInUp: object;
   skills: Skills;
+  id?: string;
 }
 
-export function SkillsSection({ fadeInUp, skills }: SkillsSectionProps) {
+export function SkillsSection({ fadeInUp, skills, id }: SkillsSectionProps) {
+
+  const ref = useRef(null);
+
   return (
-    <motion.section id="skills" className="py-20" {...fadeInUp}>
-      <h2 className="text-3xl font-bold mb-10 text-center text-teal-400">
+    <motion.section id={id} ref={ref} className="py-20" {...fadeInUp}>
+      <h2 className="text-3xl font-bold mb-10 text-teal-400">
         Minhas Habilidades
       </h2>
       <div className="grid grid-cols-1  md:grid-cols-2 gap-6">

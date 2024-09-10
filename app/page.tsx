@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -48,12 +48,24 @@ export default function Page() {
       />
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <main className="container mx-auto px-6 pt-20">
-        <AboutSection fadeInUp={fadeInUp} />
-        <SkillsSection fadeInUp={fadeInUp} skills={skillsData} />
-        <ExperienceSection fadeInUp={fadeInUp} experience={experienceData} />
-        <ProjectsSection fadeInUp={fadeInUp} projects={projectData} />
+        <AboutSection fadeInUp={fadeInUp} id="about" />
+        <ProjectsSection
+          fadeInUp={fadeInUp}
+          id="projects"
+          projects={projectData}
+        />
+        <ExperienceSection
+          fadeInUp={fadeInUp}
+          id="experience"
+          experience={experienceData}
+        />
+        <SkillsSection
+          fadeInUp={fadeInUp}
+          id="skills"
+          skills={skillsData}
+        />
       </main>
-      <Footer />
+      <Footer id="contact" />
     </div>
   );
 }

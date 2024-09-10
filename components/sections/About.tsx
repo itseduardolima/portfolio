@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
 import Me from "../../public/assets/images/person.jpeg";
 import Image from "next/image";
+import { useRef } from "react";
 
 interface AboutSectionProps {
   fadeInUp: object;
+  id?: string;
 }
 
-export function AboutSection({ fadeInUp }: AboutSectionProps) {
+export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
+
+  const ref = useRef(null);
+
   return (
-    <motion.section id="about" className="py-20" {...fadeInUp}>
+    <motion.section id={id} ref={ref} className="py-20" {...fadeInUp}>
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h2 className="text-4xl font-bold mb-4 text-teal-400">

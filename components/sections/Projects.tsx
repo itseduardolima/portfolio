@@ -4,16 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/mock/projectsData";
 import Image from "next/image";
+import { useRef } from "react";
 
 interface ProjectsSectionProps {
   fadeInUp: object;
   projects: Project[];
+  id?: string;
 }
 
-export function ProjectsSection({ fadeInUp, projects }: ProjectsSectionProps) {
+export function ProjectsSection({ fadeInUp, projects, id }: ProjectsSectionProps) {
+
+  const ref = useRef(null);
+
   return (
-    <motion.section id="projects" className="py-20" {...fadeInUp}>
-      <h2 className="text-3xl font-bold mb-10 text-center text-teal-400">Projetos em Destaque</h2>
+    <motion.section id={id} ref={ref} className="py-20" {...fadeInUp}>
+      <h2 className="text-3xl font-bold mb-10 text-teal-400">Projetos em Destaque</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <motion.div
