@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import RestaurantImage from "../public/assets/images/restaurant.png";
 import EdmindImage from "../public/assets/images/edmind.jpeg";
 import KaduFitnessImage from "../public/assets/images/kadu-fitness.jpeg";
+import WorkflowImage from "../public/assets/images/workflow-pro.png"
 
 export interface Project {
   title: string;
@@ -13,6 +14,15 @@ export interface Project {
 }
 
 export const projectData: Project[] = [
+  {
+    title: "WorkflowPro",
+    description:
+      "Modelo de landing page elegante e responsivo, projetado para mostrar ferramentas de automação de fluxo de trabalho e SaaS. Perfeito para pequenas e médias empresas, ele apresenta seções personalizáveis ​​como Recursos, Preços e FAQ. Com animações envolventes, botões de call-to-action de alta conversão e otimização de SEO, o WorkflowPro ajuda apresentar serviços forma eficaz e converter leads sem esforço.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
+    deployLink: "https://workflow-pro-tau.vercel.app/",
+    githubLink: "https://github.com/itseduardolima/WorkflowPro",
+    image: WorkflowImage,
+  },
   {
     title: "Restaurante Arte & Sabor",
     description:
