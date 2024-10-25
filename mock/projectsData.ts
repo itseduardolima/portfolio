@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import RestaurantImage from "../public/assets/images/restaurant.png";
-import KaduFitnessImage from "../public/assets/images/kadu-fitness.jpeg";
+import LoveJourneyImage from "../public/assets/images/love-journey.png";
 import WorkflowImage from "../public/assets/images/workflow-pro.png";
 import EdSolutionsImage from "../public/assets/images/edsolutions.png";
 
@@ -14,6 +14,15 @@ export interface Project {
 }
 
 export const projectData: Project[] = [
+  {
+    title: "Love Journey",
+    description:
+      "Projeto pessoal FullStack onde a ideia é que o usuário crie uma narrativa visual única do seu relacionamento, destacando momentos especiais e marcos importantes em uma bela linha do tempo interativa.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
+    deployLink: "https://lovejourney.vercel.app/",
+    githubLink: "https://github.com/itseduardolima/love-journey-frontend.git",
+    image: LoveJourneyImage,
+  },
   {
     title: "EdSoluctions",
     description:
@@ -40,14 +49,5 @@ export const projectData: Project[] = [
     deployLink: "https://restaurante-sabor-e-arte.vercel.app/",
     githubLink: "https://github.com/itseduardolima/landing-page-restaurant",
     image: RestaurantImage,
-  },
-  {
-    title: "Kadu Fitness",
-    description:
-      "Landing page dedicada a apresentar as diversas aulas oferecidas na Kadu Fitness, bem como destacar os talentosos professores que as conduzem.",
-    technologies: ["React", "Vite", "TypeScript", "Styled Components", "Html"],
-    deployLink: "https://kadufitness.netlify.app/",
-    githubLink: "https://github.com/itseduardolima/kadu-fitness",
-    image: KaduFitnessImage,
   },
 ];
