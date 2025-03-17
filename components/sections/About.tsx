@@ -23,7 +23,7 @@ export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [jobTitles.length])
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {

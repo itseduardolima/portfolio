@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export function Header({ isMenuOpen, toggleMenu }: HeaderProps) {
   return (
-    <header className="fixed max-w-xs lg:max-w-5xl mx-auto top-10 rounded-2xl left-0 right-0 z-40 lg:bg-opacity-80 lg:backdrop-blur-xl bg-gray-800">
+    <header className="absolute max-w-xs lg:max-w-5xl mx-auto top-10 rounded-2xl left-0 right-0 z-40 lg:bg-opacity-80 lg:backdrop-blur-xl bg-gray-800">
       <nav className="  px-8 py-3 lg:py-5 flex justify-between items-center">
         <motion.h1
           className="text-2xl font-bold text-teal-400"
