@@ -1,53 +1,58 @@
-import { StaticImageData } from "next/image";
-import RestaurantImage from "../public/assets/images/restaurant.png";
-import LoveJourneyImage from "../public/assets/images/love-journey.png";
-import WorkflowImage from "../public/assets/images/workflow-pro.png";
-import EdSolutionsImage from "../public/assets/images/edsolutions.png";
+import type { StaticImageData } from "next/image"
+import AllinsysImage from "@/public/assets/images/allinsys.png"
+import TravelTagsImage from "@/public/assets/images/traveltags.png"
+import PassImage from "@/public/assets/images/pass.png"
+import WorkflowImage from "@/public/assets/images/workflow-pro.png"
 
 export interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  deployLink: string;
-  githubLink: string;
-  image: StaticImageData;
+  title: string
+  description: string
+  technologies: string[]
+  deployLink: string
+  githubLink: string
+  image: StaticImageData
+  isFreelance: boolean
 }
 
 export const projectData: Project[] = [
   {
-    title: "Love Journey",
+    title: "Allinsys",
     description:
-      "Projeto pessoal FullStack onde a ideia é que o usuário crie uma narrativa visual única do seu relacionamento, destacando momentos especiais e marcos importantes em uma bela linha do tempo interativa.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
-    deployLink: "https://lovejourney.vercel.app/",
-    githubLink: "https://github.com/itseduardolima/love-journey-frontend.git",
-    image: LoveJourneyImage,
-  },
-  {
-    title: "EdSoluctions",
-    description:
-      "Projeto pessoal que oferece soluções de desenvolvimento web e serviços de SEO para impulsionar a presença online do cliente.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
-    deployLink: "https://edsolutions.vercel.app/",
-    githubLink: "https://github.com/itseduardolima/edsolutions",
-    image: EdSolutionsImage,
+      "Landing page para uma plataforma de processos personalizados voltada para gestão de negócios.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion", "i18n", "zod"],
+    deployLink: "https://www.allinsys.com",
+    githubLink: "",
+    image: AllinsysImage,
+    isFreelance: true,
   },
   {
     title: "WorkflowPro",
     description:
-      "Modelo de landing page elegante e responsivo, projetado para mostrar ferramentas de automação de fluxo de trabalho e SaaS. Perfeito para pequenas e médias empresas, ele apresenta seções personalizáveis ​​como Recursos, Preços e FAQ. Com animações envolventes, botões de call-to-action de alta conversão e otimização de SEO, o WorkflowPro ajuda apresentar serviços forma eficaz e converter leads sem esforço.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
+      "Landing page elegante e responsiva para demonstrar ferramentas de automação de fluxo de trabalho.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion"],
     deployLink: "https://workflow-pro-tau.vercel.app/",
     githubLink: "https://github.com/itseduardolima/WorkflowPro",
     image: WorkflowImage,
+    isFreelance: false,
   },
   {
-    title: "Restaurante Arte & Sabor",
+    title: "Passb2b",
     description:
-      "Esta é uma landing page desenvolvida para um restaurante fictício. O objetivo principal desta página é apresentar o restaurante, seu cardápio diversificado e atrair clientes por meio de um design moderno e intuitivo.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Html"],
-    deployLink: "https://restaurante-sabor-e-arte.vercel.app/",
-    githubLink: "https://github.com/itseduardolima/landing-page-restaurant",
-    image: RestaurantImage,
+      "Landing page para uma plataforma de gestão e distribuição no setor de turismo.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion", "i18n", "zod"],
+    deployLink: "https://www.passb2b.com",
+    githubLink: "",
+    image: PassImage,
+    isFreelance: true,
   },
-];
+  {
+    title: "TravelTags",
+    description:
+      "Landing page para um aplicativo de rastreamento de bagagens. Desenvolvi uma interface que comunica de forma clara e atraente o funcionamento do sistema de tags e notificações.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion" , "i18n"],
+    deployLink: "https://traveltags.vercel.app",
+    githubLink: "",
+    image: TravelTagsImage,
+    isFreelance: true,
+  },
+]

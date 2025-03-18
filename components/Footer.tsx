@@ -45,8 +45,8 @@ export function Footer({ id }: FooterProps) {
   };
 
   return (
-    <footer id={id} ref={ref} className="bg-gray-900 py-12 mt-20">
-      <div className="container mx-auto px-6">
+    <footer id={id} ref={ref} className="bg-gray-900 py-12 mt-20 px-6 lg:px-0">
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
             className="space-y-6"
