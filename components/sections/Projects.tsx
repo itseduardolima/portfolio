@@ -27,7 +27,7 @@ export function ProjectsSection({ fadeInUp, projects, id }: ProjectsSectionProps
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
 
   return (
-    <motion.section id={id} ref={ref} className="relative py-16 md:py-20 overflow-hidden" {...fadeInUp}>
+    <motion.section id={id} ref={ref} className="relative min-h-screen overflow-hidden" {...fadeInUp}>
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2
           className="text-2xl lg:text-4xl font-bold mb-6 text-teal-400 text-center"

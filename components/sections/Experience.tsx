@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
 import { Experience } from "@/mock/experiencesData";
@@ -11,13 +17,29 @@ interface ExperienceSectionProps {
   id?: string;
 }
 
-export function ExperienceSection({ fadeInUp, experience, id }: ExperienceSectionProps) {
-
+export function ExperienceSection({
+  fadeInUp,
+  experience,
+  id,
+}: ExperienceSectionProps) {
   const ref = useRef(null);
 
   return (
-    <motion.section id={id} ref={ref} className="py-20" {...fadeInUp}>
-      <h2 className="text-3xl font-bold mb-10 text-teal-400">Experiência Profissional</h2>
+    <motion.section
+      id={id}
+      ref={ref}
+      className="min-h-screen max-w-5xl mx-auto"
+      {...fadeInUp}
+    >
+      <motion.h2
+        className="text-2xl lg:text-4xl font-bold mb-20 text-teal-400 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+        Experiência Profissional
+      </motion.h2>
       <div className="relative border-l-4 border-teal-400">
         {experience.map((job, index) => (
           <motion.div
@@ -39,10 +61,16 @@ export function ExperienceSection({ fadeInUp, experience, id }: ExperienceSectio
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="mb-4 text-base font-normal text-gray-300">{job.description}</p>
+                <p className="mb-4 text-base font-normal text-gray-300">
+                  {job.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {job.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="bg-teal-400 text-gray-900">
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="bg-teal-400 text-gray-900"
+                    >
                       {tech}
                     </Badge>
                   ))}
