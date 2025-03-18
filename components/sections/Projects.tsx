@@ -27,8 +27,8 @@ export function ProjectsSection({ fadeInUp, projects, id }: ProjectsSectionProps
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
 
   return (
-    <motion.section id={id} ref={ref} className="relative min-h-screen overflow-hidden" {...fadeInUp}>
-      <div className="max-w-7xl mx-auto px-4">
+    <motion.section id={id} ref={ref} className="relative min-h-[75vh]  lg:min-h-screen overflow-hidden" {...fadeInUp}>
+      <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-2xl lg:text-4xl font-bold mb-6 text-teal-400 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export function ProjectsSection({ fadeInUp, projects, id }: ProjectsSectionProps
           Projetos em Destaque
         </motion.h2>
 
-        <div className="relative px-2 md:px-12 py-6 md:py-10">
+        <div className="relative md:px-12 py-6 md:py-10">
           {/* Navigation buttons - Hidden on small screens, visible on medium and up */}
           <Button
             variant="ghost"

@@ -32,7 +32,7 @@ export function ExperienceSection({
       {...fadeInUp}
     >
       <motion.h2
-        className="text-2xl lg:text-4xl font-bold mb-20 text-teal-400 text-center"
+        className="text-2xl lg:text-4xl font-bold mb-10 text-teal-400 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -40,11 +40,11 @@ export function ExperienceSection({
       >
         Experiência Profissional
       </motion.h2>
-      <div className="relative border-l-4 border-teal-400">
+      <div className="relative lg:border-l-4 lg:border-teal-400">
         {experience.map((job, index) => (
           <motion.div
             key={index}
-            className="mb-10 ml-6"
+            className="mb-10 lg:ml-6"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
