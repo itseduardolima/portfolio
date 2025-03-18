@@ -16,10 +16,10 @@ export interface Project {
 
 export const projectData: Project[] = [
   {
-    title: "Allinys",
+    title: "Allinsys",
     description:
       "Landing page para uma plataforma de processos personalizados voltada para gestão de negócios.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion", "i18n", "zod"],
     deployLink: "https://www.allinsys.com",
     githubLink: "",
     image: AllinsysImage,
@@ -29,7 +29,7 @@ export const projectData: Project[] = [
     title: "WorkflowPro",
     description:
       "Landing page elegante e responsiva para demonstrar ferramentas de automação de fluxo de trabalho.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion"],
     deployLink: "https://workflow-pro-tau.vercel.app/",
     githubLink: "https://github.com/itseduardolima/WorkflowPro",
     image: WorkflowImage,
@@ -39,7 +39,7 @@ export const projectData: Project[] = [
     title: "Passb2b",
     description:
       "Landing page para uma plataforma de gestão e distribuição no setor de turismo.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion", "i18n", "zod"],
     deployLink: "https://www.passb2b.com",
     githubLink: "",
     image: PassImage,
@@ -49,7 +49,7 @@ export const projectData: Project[] = [
     title: "TravelTags",
     description:
       "Landing page para um aplicativo de rastreamento de bagagens. Desenvolvi uma interface que comunica de forma clara e atraente o funcionamento do sistema de tags e notificações.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer-motion" , "i18n"],
     deployLink: "https://traveltags.vercel.app",
     githubLink: "",
     image: TravelTagsImage,
