@@ -28,7 +28,7 @@ export function ProjectsSection({ fadeInUp, projects, id }: ProjectsSectionProps
 
   return (
     <motion.section id={id} ref={ref} className="relative min-h-[75vh]  lg:min-h-screen overflow-hidden" {...fadeInUp}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-2xl lg:text-4xl font-bold mb-6 text-teal-400 text-center"
           initial={{ opacity: 0, y: 20 }}

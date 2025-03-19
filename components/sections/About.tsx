@@ -37,7 +37,7 @@ export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
     <motion.section
       id={id}
       ref={ref}
-      className="min-h-screen lg:min-h-[80vh] flex flex-col justify-center max-w-5xl mx-auto"
+      className="min-h-screen lg:min-h-[80vh] flex flex-col justify-center max-w-6xl mx-auto"
       {...fadeInUp}
     >
       <div className="flex flex-col md:flex-row items-center justify-between ">
