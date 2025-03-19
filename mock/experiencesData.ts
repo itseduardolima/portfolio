@@ -12,7 +12,7 @@ export const experienceData: Experience[] = [
     company: "Autônomo",
     period: "Nov 2024 - Presente",
     description:
-      "Atualmente atuo como desenvolvedor freelancer, oferecendo soluções personalizadas para diversos clientes. Desenvolvo landing pages de alta conversão, sistemas web completos e workspaces corporativos, sempre focando em design responsivo e experiência do usuário. Gerencio todo o ciclo de desenvolvimento, desde o levantamento de requisitos até a implementação e manutenção. Trabalho diretamente com os clientes para entender suas necessidades específicas e entregar soluções que atendam precisamente às suas expectativas, garantindo código limpo, performance otimizada e interfaces intuitivas.",
+      "Atualmente atuo como desenvolvedor freelancer, oferecendo soluções personalizadas para diversos clientes. Desenvolvo landing pages de alta conversão, sistemas web completos e workspaces corporativos, sempre focando em design responsivo e experiência do usuário.",
     technologies: [
       "React",
       "Next.js",
@@ -32,7 +32,7 @@ export const experienceData: Experience[] = [
     company: "MW Tecnologia e Programação",
     period: "Jan 2024 - Ago 2024",
     description:
-      "Contratado como Desenvolvedor Júnior PJ, mas as vezes desempenhando atividades de nível pleno, fui responsável por implementar e manter funcionalidades em sistemas CRMs, realizar integrações com APIs e desenvolver gráficos interativos utilizando Chart.js. Trabalhei sozinho em todo o front-end, utilizando React.js e Next.js, e focando em escrever código limpo e escalável. Desenvolvi componentes reutilizáveis para otimizar a manutenção e a eficiência do sistema, aplicando as melhores práticas de desenvolvimento.",
+      "Fui responsável por implementar e manter funcionalidades em sistemas CRMs, realizar integrações com APIs e desenvolver gráficos interativos utilizando Chart.js.",
     technologies: [
       "React",
       "Next.js",

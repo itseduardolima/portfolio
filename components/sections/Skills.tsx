@@ -15,7 +15,7 @@ export function SkillsSection({ fadeInUp, skills, id }: SkillsSectionProps) {
   const ref = useRef(null);
 
   return (
-    <motion.section id={id} ref={ref} className="min-h-[70vh] max-w-5xl mx-auto flex flex-col justify-center" {...fadeInUp}>
+    <motion.section id={id} ref={ref} className="min-h-[70vh] max-w-6xl mx-auto flex flex-col justify-center" {...fadeInUp}>
       <h2 className="text-3xl font-bold mb-10 text-teal-400">
         Minhas Habilidades
       </h2>

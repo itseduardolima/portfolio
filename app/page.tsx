@@ -12,6 +12,7 @@ import { experienceData } from "@/mock/experiencesData";
 import { projectData } from "@/mock/projectsData";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { educationData } from "@/mock/educationData";
 
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-100">
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <main className="container mx-auto px-6 pt-20">
+      <main className="container mx-auto px-4 pt-20">
         <AboutSection fadeInUp={fadeInUp} id="about" />
         <ProjectsSection
           fadeInUp={fadeInUp}
@@ -49,6 +50,7 @@ export default function Page() {
           fadeInUp={fadeInUp}
           id="experience"
           experience={experienceData}
+          education={educationData}
         />
         <SkillsSection fadeInUp={fadeInUp} id="skills" skills={skillsData} />
       </main>
