@@ -24,6 +24,8 @@ export const skillsData: Skills = {
     "JWT",
     "TypeOrm",
     "Docker",
+    "Prisma",
+    "Websocket"
   ],
   Design: ["Figma", "Adobe XD"],
   Banco: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "SQL Server"],

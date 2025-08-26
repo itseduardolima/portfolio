@@ -38,7 +38,7 @@ export const projectData: Project[] = [
       "i18n",
       "zod",
     ],
-    deployLink: "https://www.allinsys.com",
+    deployLink: "https://allinsys.vercel.app",
     githubLink: "",
     image: AllinsysImage,
     isFreelance: true,
