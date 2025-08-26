@@ -26,6 +26,7 @@ export const educationData: Education[] = [
     description:
       "Curso completo de React com TypeScript, abordando componentes, hooks, gerenciamento de estado, rotas e integração com APIs. Desenvolvimento de projetos práticos com foco em boas práticas e padrões de código.",
   },
+  
   {
     course: "Formação Next.js",
     institution: "Alura",
@@ -35,4 +36,14 @@ export const educationData: Education[] = [
     description:
       "Especialização em Next.js, framework React para desenvolvimento de aplicações web. Abordagem de SSR, SSG, ISR, API Routes, e otimizações de performance. Criação de projetos completos com foco em SEO e experiência do usuário.",
   },
+  {
+    course: "Formação Nest.js",
+    institution: "Alura",
+    startDate: "Abril 2023",
+    endDate: "Maio 2023",
+    isCompleted: true,
+    description:
+      "Especialização em Nest.js, framework Node.js para desenvolvimento de aplicações backend. Abordagem de controllers, services, repositories, migrations, autenticação e autorização. Criação de projetos completos com foco em performance e escalabilidade.",
+  },
+  
 ];
