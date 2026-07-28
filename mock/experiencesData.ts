@@ -2,75 +2,51 @@ export interface Experience {
   title: string;
   company: string;
   period: string;
+  current?: boolean;
   description: string;
   technologies: string[];
 }
 
 export const experienceData: Experience[] = [
   {
-    title: "Desenvolvedor FullStack Pleno",
-    company: "Instituto Conecthus - Tecnologia e Biotecnologia do Amazonas",
-    period: "Mai 2025 - Presente",
+    title: "Desenvolvedor Fullstack Pleno",
+    company: "Instituto Conecthus — Tecnologia e Biotecnologia do Amazonas",
+    period: "Mai 2025 — Atual",
+    current: true,
     description:
-      "Desenvolvo projetos para o setor industrial, com foco em soluções que integram Inteligência Artificial (IA) e dados em tempo real. Sou responsável por todo o ciclo de vida do software, garantindo a criação de sistemas que melhoram a eficiência operacional e a tomada de decisões.",
+      "Atuo em 2 a 3 projetos simultâneos para o setor industrial, integrando IA, dados em tempo real e automação de processos. Responsável pelo ciclo completo do software — arquitetura, implementação, integração com modelos de IA, testes e manutenção. Realizo code review diário e apoio técnico ao time.",
     technologies: [
+      "NestJS",
       "React",
-      "TypeScript",
-      "Styled-Components",
-      "Zod",
-      "Yup",
-      "Nestjs",
-      "Node.js",
-      "Nest.js",
-      "Prisma",
-      "Figma",
+      "Python",
+      "FastAPI",
+      "RabbitMQ",
       "Docker",
-      "Swagger",
-      "JWT",
-      "TypeORM",
-      "SQLServer",
+      "WebSocket",
     ],
   },
   {
-    title: "Desenvolvedor FullStack",
-    company: "Autônomo",
-    period: "Nov 2024 - Mai 2025",
+    title: "Desenvolvedor Fullstack",
+    company: "Autônomo — Freelancer",
+    period: "Nov 2024 — Atual",
+    current: true,
     description:
-      "Atualmente atuo como desenvolvedor freelancer, oferecendo soluções personalizadas para diversos clientes. Desenvolvo landing pages de alta conversão, sistemas web completos e workspaces corporativos, sempre focando em design responsivo e experiência do usuário.",
+      "Desenvolvo landing pages, sistemas web e workspaces corporativos sob medida, com foco em design responsivo e UX. Gerencio o ciclo completo — requisitos, arquitetura, implementação e manutenção pós-entrega — em contato direto com cada cliente.",
     technologies: [
-      "React",
       "Next.js",
+      "React",
       "TypeScript",
       "Tailwind CSS",
-      "Sass",
-      "Styled-Components",
-      "Zod",
       "Node.js",
       "Framer Motion",
-      "Figma",
-
     ],
   },
   {
-    title: "Desenvolvedor Frontend",
-    company: "MW Tecnologia e Programação",
-    period: "Jan 2024 - Ago 2024",
+    title: "Desenvolvedor Frontend Jr.",
+    company: "M.W Tecnologia e Programação",
+    period: "Jan 2024 — Ago 2024",
     description:
-      "Fui responsável por implementar e manter funcionalidades em sistemas CRMs, realizar integrações com APIs e desenvolver gráficos interativos utilizando Chart.js.",
-    technologies: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Styled Components",
-    ],
-  },
-  {
-    title: "Desenvolvedor Backend - Estagiário",
-    company: "Instituto Conecthus - Tecnologia e Biotecnologia do Amazonas",
-    period: "Mar 2023 - Dez 2023",
-    description:
-      "Como estagiário, contribui no desenvolvimento de APIs escaláveis e bem documentadas. Atuei na implementação de validações, garantindo a integridade dos dados e o acesso eficiente aos recursos do sistema. Além disso, participei de integrações e otimizações que aprimoraram a performance e a confiabilidade das APIs, aplicando as melhores práticas relacionadas ao Nest.js.",
-    technologies: ["Node.js", "Nest.js", "Swagger", "TypeOrm", "JWT"],
+      "Implementei e mantive funcionalidades em sistemas CRM com React e Next.js, integrando APIs de terceiros. Atuei em todas as fases do frontend — componentes, integração REST, correção de bugs e revisão de código — em equipe ágil Scrum.",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
