@@ -1,117 +1,81 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { StatusDot } from "@/components/ui/status-dot";
 
 interface HeaderProps {
   isMenuOpen: boolean;
   toggleMenu: () => void;
 }
 
+const NAV_ITEMS = [
+  { href: "#sobre", label: "Sobre" },
+  { href: "#stack", label: "Stack" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#projetos", label: "Projetos" },
+  { href: "#contato", label: "Contato" },
+];
+
 export function Header({ isMenuOpen, toggleMenu }: HeaderProps) {
   return (
-    <header className="absolute max-w-xs lg:max-w-5xl mx-auto top-10 rounded-2xl left-0 right-0 z-40 lg:bg-opacity-80 lg:backdrop-blur-xl bg-gray-800">
-      <nav className="  px-8 py-3 lg:py-5 flex justify-between items-center">
-        <motion.h1
-          className="text-2xl font-bold text-teal-400"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Eduardo Lima
-        </motion.h1>
-        <div className="md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleMenu}
-            className="text-gray-300 hover:text-teal-400 font-bold"
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-line bg-graphite/85 backdrop-blur-md">
+      <div className="max-w-rail mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#hero" className="font-mono text-sm text-ink shrink-0">
+          E.LIMA<span className="text-amber">_</span>CASTRO
+        </a>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="mono-caps text-[11px] text-muted hover:text-amber transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden md:flex items-center gap-2 shrink-0">
+          <StatusDot color="signal" />
+          <span className="mono-caps text-[11px] text-muted">Disponível</span>
         </div>
-        <motion.div
-          className="hidden md:flex items-center space-x-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+
+        <button
+          type="button"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={isMenuOpen}
+          className="md:hidden rounded-md text-ink p-1.5 hover:bg-panel transition-colors"
         >
-          <a
-            href="#about"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-          >
-            Sobre
-          </a>
-          <a
-            href="#skills"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-          >
-            Habilidades
-          </a>
-          <a
-            href="#experience"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-          >
-            Experiência
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-          >
-            Projetos
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-          >
-            Contato
-          </a>
-        </motion.div>
-      </nav>
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
       <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{
-          opacity: isMenuOpen ? 1 : 0,
-          height: isMenuOpen ? "auto" : 0,
-        }}
-        transition={{ duration: 0.3 }}
-        className="md:hidden bg-gray-800  rounded-2xl overflow-hidden px-4"
+        initial={false}
+        animate={{ height: isMenuOpen ? "auto" : 0 }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+        className="md:hidden overflow-hidden rounded-b-xl border-t border-line bg-graphite"
       >
-        <div className="flex flex-col p-4 space-y-4 ">
-          <a
-            href="#about"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-            onClick={toggleMenu}
-          >
-            Sobre
-          </a>
-          <a
-            href="#skills"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-            onClick={toggleMenu}
-          >
-            Habilidades
-          </a>
-          <a
-            href="#experience"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-            onClick={toggleMenu}
-          >
-            Experiência
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-            onClick={toggleMenu}
-          >
-            Projetos
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-300 hover:text-teal-400 font-bold transition-colors"
-            onClick={toggleMenu}
-          >
-            Contato
-          </a>
+        <div className="flex flex-col px-5 py-4 gap-4">
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={toggleMenu}
+              className="mono-caps text-xs text-muted hover:text-amber transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+          <div className="flex items-center gap-2 pt-2 border-t border-line">
+            <StatusDot color="signal" />
+            <span className="mono-caps text-[11px] text-muted">
+              Disponível — freelance / remoto
+            </span>
+          </div>
         </div>
       </motion.div>
     </header>

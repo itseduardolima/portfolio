@@ -1,8 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { Skills } from "@/mock/skillsData";
-import { useRef } from "react";
 
 interface SkillsSectionProps {
   fadeInUp: object;
@@ -10,45 +10,47 @@ interface SkillsSectionProps {
   id?: string;
 }
 
-export function SkillsSection({ fadeInUp, skills, id }: SkillsSectionProps) {
-
-  const ref = useRef(null);
+export function SkillsSection({ skills, id }: SkillsSectionProps) {
+  const entries = Object.entries(skills);
 
   return (
-    <motion.section id={id} ref={ref} className="min-h-[70vh] max-w-6xl mx-auto flex flex-col justify-center" {...fadeInUp}>
-      <h2 className="text-3xl font-bold mb-10 text-teal-400">
-        Minhas Habilidades
-      </h2>
-      <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
-        {Object.entries(skills).map(([category, techs], index) => (
+    <section id={id} className="py-24 lg:py-32">
+      <SectionHeading
+        index="02"
+        eyebrow="Stack técnica"
+        title="Registro de stack"
+        description="Ferramentas e frameworks que uso no dia a dia, agrupados por camada — do frontend à infraestrutura e IA."
+      />
+
+      <div className="grid md:grid-cols-2 gap-px bg-line border border-line">
+        {entries.map(([category, techs], index) => (
           <motion.div
             key={category}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.4, delay: (index % 2) * 0.08 }}
             viewport={{ once: true, amount: 0.3 }}
+            className="bg-panel p-6 lg:p-7"
           >
-            <Card className="bg-gradient-to-br from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 border-teal-400">
-              <CardHeader>
-                <CardTitle className="text-teal-400">{category}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {techs.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className="bg-teal-400 text-gray-900"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-baseline justify-between mb-4">
+              <h3 className="mono-caps text-xs text-amber">{category}</h3>
+              <span className="font-mono text-[11px] text-faint">
+                {String(techs.length).padStart(2, "0")}
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {techs.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full font-mono text-xs text-ink border border-line2 px-2.5 py-1.5 hover:border-amber hover:text-amber transition-colors"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

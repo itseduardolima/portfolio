@@ -1,138 +1,114 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { Github, Linkedin } from "lucide-react"
-import Me from "../../public/assets/images/person.jpeg"
-import Image from "next/image"
-import { useRef, useState, useEffect } from "react"
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Panel, PanelRow } from "@/components/ui/panel";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { StatusDot } from "@/components/ui/status-dot";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
+import { profile } from "@/mock/profileData";
 
 interface AboutSectionProps {
-  fadeInUp: object
-  id?: string
+  fadeInUp: object;
+  id?: string;
 }
 
 export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
-  const ref = useRef(null)
-  const [jobTitleIndex, setJobTitleIndex] = useState(0)
-  const jobTitles = ["Desenvolvedor Frontend", "Desenvolvedor Backend", "Desenvolvedor FullStack"]
-  const [cursorVisible, setCursorVisible] = useState(true)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setJobTitleIndex((prevIndex) => (prevIndex + 1) % jobTitles.length)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [jobTitles.length])
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev)
-    }, 500)
-
-    return () => clearInterval(cursorInterval)
-  }, [])
-
   return (
-    <motion.section
-      id={id}
-      ref={ref}
-      className="min-h-screen lg:min-h-[80vh] flex flex-col justify-center max-w-6xl mx-auto"
-      {...fadeInUp}
-    >
-      <div className="flex flex-col md:flex-row items-center justify-between ">
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-teal-400">
-            Olá, eu sou o Eduardo <br />
-            <div className="h-[40px] overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={jobTitleIndex}
-                  className="inline-block"
-                  initial={{
-                    y: 40,
-                    opacity: 0,
-                    color: "#2dd4bf",
-                  }}
-                  animate={{
-                    y: 0,
-                    opacity: 1,
-                    color: ["#2dd4bf", "#3b82f6", "#2dd4bf"],
-                    transition: {
-                      y: { type: "spring", stiffness: 100, damping: 15 },
-                      opacity: { duration: 0.4 },
-                      color: { duration: 2, times: [0, 0.5, 1] },
-                    },
-                  }}
-                  exit={{
-                    y: -40,
-                    opacity: 0,
-                    transition: { duration: 0.3 },
-                  }}
-                >
-                  {jobTitles[jobTitleIndex].split("").map((char, index) => (
-                    <motion.span
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                        transition: {
-                          delay: index * 0.05,
-                          duration: 0.3,
-                        },
-                      }}
-                      className="inline-block"
-                    >
-                      {char === " " ? "\u00A0" : char}
-                    </motion.span>
-                  ))}
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: cursorVisible ? 1 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="inline-block ml-1 w-[3px] h-[30px] bg-teal-400"
-                  />
-                </motion.span>
-              </AnimatePresence>
+    <section id={id} className="pt-28 lg:pt-36">
+      {/* Hero / nameplate */}
+      <div className="relative">
+        <div
+          className="bp-grid absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,black,transparent)]"
+          aria-hidden="true"
+        />
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-start pb-20 lg:pb-28">
+          <motion.div {...fadeInUp}>
+            <div className="flex items-center gap-2 mb-6">
+              <StatusDot color="signal" />
+              <span className="mono-caps text-xs text-muted">
+                Dev Fullstack — Manaus, BR
+              </span>
             </div>
-          </h2>
-          <p className="lg:text-xl mb-6 text-gray-300">
-            Bem-vindo ao meu portfólio! Sou um <span className="text-teal-400">Desenvolvedor</span> com uma sólida
-            experiência em construção de aplicações modernas. Minhas habilidades abrangem uma variedade de tecnologias,
-            destacando-me na criação de soluções robustas e eficientes.
-          </p>
-          <div className="flex space-x-4">
-            <a
-              href="https://github.com/itseduardolima"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              <Github className="mr-2 h-4 w-4" /> GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/eduardolima07/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-teal-400 border border-teal-400 hover:bg-teal-400 hover:text-gray-900 font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-            </a>
-          </div>
+            <h1 className="font-display font-black uppercase text-[13vw] sm:text-6xl lg:text-7xl leading-[0.92] tracking-tight text-ink">
+              Do problema
+              <br />
+              ao <span className="text-amber">produto</span>
+              <br />
+              em produção.
+            </h1>
+            <p className="mt-6 max-w-xl text-muted text-base lg:text-lg leading-relaxed">
+              Fullstack pleno responsável pelo ciclo completo do software —
+              arquitetura, implementação e manutenção. Disponível para
+              projetos freelance e vagas remotas: sistemas web,
+              landing pages e workspaces corporativos sob medida.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a
+                href="#contato"
+                className="inline-flex items-center gap-2 rounded-md bg-amber text-graphite font-mono text-sm font-semibold px-6 py-3.5 hover:bg-ink transition-colors"
+              >
+                <WhatsAppIcon size={16} /> Contratar / falar comigo
+              </a>
+              <a
+                href="#projetos"
+                className="inline-flex items-center gap-2 rounded-md border border-line2 text-ink font-mono text-sm px-6 py-3.5 hover:border-amber hover:text-amber transition-colors"
+              >
+                Ver projetos <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <Panel className="p-6">
+              <p className="mono-caps text-[11px] text-faint mb-1">Ficha técnica</p>
+              <div>
+                <PanelRow label="Unidade" value={profile.name} />
+                <PanelRow label="Função" value={profile.role} />
+                <PanelRow label="Localização" value={profile.location} />
+                <PanelRow
+                  label="Status"
+                  value={
+                    <span className="inline-flex items-center gap-2 justify-end">
+                      <StatusDot color="signal" /> Disponível
+                    </span>
+                  }
+                />
+                <PanelRow label="Stack core" value={profile.stackCore.join(" · ")} />
+              </div>
+            </Panel>
+          </motion.div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Image
-            src={Me}
-            alt="Eduardo"
-            className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-teal-400 shadow-lg"
-          />
-        </motion.div>
       </div>
-    </motion.section>
-  )
+
+      {/* Resumo + serviços */}
+      <SectionHeading index="01" eyebrow="Sobre" title="Resumo" description={profile.summary} />
+
+      <div className="grid sm:grid-cols-3 gap-4 mb-24 lg:mb-32">
+        {profile.services.map((service, i) => (
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            viewport={{ once: true, amount: 0.4 }}
+          >
+            <Panel className="p-6 h-full">
+              <span className="font-mono text-xs text-amber">
+                0{i + 1}
+              </span>
+              <h3 className="font-display font-bold uppercase text-xl text-ink mt-3 mb-2 leading-tight">
+                {service.title}
+              </h3>
+              <p className="text-sm text-muted leading-relaxed">{service.description}</p>
+            </Panel>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 }

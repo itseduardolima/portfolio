@@ -18,7 +18,7 @@ export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
+    initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   };
@@ -37,25 +37,25 @@ export default function Page() {
   }, [isMenuOpen]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-100">
+    <div className="min-h-screen bg-graphite text-ink">
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <main className="container mx-auto px-4 pt-20">
-        <AboutSection fadeInUp={fadeInUp} id="about" />
-        <ProjectsSection
-          fadeInUp={fadeInUp}
-          id="projects"
-          projects={projectData}
-        />
+      <main id="hero" className="max-w-rail mx-auto px-5 lg:px-8">
+        <AboutSection fadeInUp={fadeInUp} id="sobre" />
+        <SkillsSection fadeInUp={fadeInUp} id="stack" skills={skillsData} />
         <ExperienceSection
           fadeInUp={fadeInUp}
-          id="experience"
+          id="experiencia"
           experience={experienceData}
           education={educationData}
         />
-        <SkillsSection fadeInUp={fadeInUp} id="skills" skills={skillsData} />
+        <ProjectsSection
+          fadeInUp={fadeInUp}
+          id="projetos"
+          projects={projectData}
+        />
       </main>
-      <Footer id="contact" />
-      <ToastContainer />
+      <Footer id="contato" />
+      <ToastContainer theme="dark" />
     </div>
   );
 }
