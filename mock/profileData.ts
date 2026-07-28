@@ -2,7 +2,7 @@ export const profile = {
   name: "Eduardo Lima Castro",
   role: "Desenvolvedor Fullstack Pleno",
   location: "Manaus, AM — Brasil",
-  email: "eduardolima2417@gmail.com",
+  email: "contato@eduardolima.tech",
   phone: "(92) 99188-7687",
   phoneIntl: "5592991887687",
   site: "eduardolima.tech",
