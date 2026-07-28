@@ -39,9 +39,9 @@ export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
             </h1>
             <p className="mt-6 max-w-xl text-muted text-base lg:text-lg leading-relaxed">
               Fullstack pleno responsável pelo ciclo completo do software —
-              arquitetura, implementação e manutenção. Disponível para
-              projetos freelance e vagas remotas: sistemas web,
-              landing pages e workspaces corporativos sob medida.
+              arquitetura, implementação e manutenção. Crio sites, sistemas
+              web e lojas virtuais sob medida para empresas e profissionais,
+              além de atuar em vagas freelance e remotas.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
@@ -88,7 +88,7 @@ export function AboutSection({ fadeInUp, id }: AboutSectionProps) {
       {/* Resumo + serviços */}
       <SectionHeading index="01" eyebrow="Sobre" title="Resumo" description={profile.summary} />
 
-      <div className="grid sm:grid-cols-3 gap-4 mb-24 lg:mb-32">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-24 lg:mb-32">
         {profile.services.map((service, i) => (
           <motion.div
             key={service.title}

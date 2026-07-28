@@ -191,12 +191,9 @@ export function Footer({ id }: FooterProps) {
           </motion.div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="mt-16 pt-8 border-t border-line">
           <p className="mono-caps text-[11px] text-faint">
-            &copy; {new Date().getFullYear()} Eduardo Lima Castro
-          </p>
-          <p className="mono-caps text-[11px] text-faint">
-            Compilado com Next.js — Manaus, BR
+            &copy; {new Date().getFullYear()} Eduardo Lima Castro · CNPJ {profile.cnpj}
           </p>
         </div>
       </div>

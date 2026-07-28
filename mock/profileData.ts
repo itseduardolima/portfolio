@@ -12,6 +12,8 @@ export const profile = {
   linkedinHandle: "linkedin.com/in/eduardolima07",
   resumeUrl: "/assets/docs/eduardo-lima-castro-curriculo.pdf",
   availability: "Disponível — freelance, híbrido ou remoto",
+  legalName: "57.976.158 Eduardo Lima Castro",
+  cnpj: "57.976.158/0001-19",
   summary:
     "Desenvolvedor Fullstack especializado em sistemas industriais, Inteligência Artificial e plataformas SaaS. Atuo em múltiplos projetos paralelos, realizo code review e mentoria técnica. Responsável pelo ciclo completo do software — da arquitetura à integração de modelos de IA em produção.",
   stackCore: ["React", "Next.js", "NestJS", "Python"],
@@ -21,19 +23,24 @@ export const profile = {
   ],
   services: [
     {
-      title: "Sistemas web sob medida",
+      title: "Sites e landing pages",
       description:
-        "Plataformas e dashboards completos — do levantamento de requisitos à manutenção pós-entrega.",
+        "Presença online profissional, rápida e responsiva para você ou o seu negócio.",
     },
     {
-      title: "Landing pages de alta conversão",
+      title: "Sistemas sob medida",
       description:
-        "Páginas responsivas, rápidas e orientadas a UX para captar e converter visitantes.",
+        "Automatize processos e ganhe eficiência com um sistema feito sob medida para a sua empresa.",
     },
     {
-      title: "IA aplicada & integrações",
+      title: "Lojas virtuais",
       description:
-        "Pipelines de RAG, automação de processos e integração de modelos de IA a sistemas existentes.",
+        "Venda online com uma loja rápida, segura e fácil de usar, com checkout e gestão de pedidos.",
+    },
+    {
+      title: "Automação com Inteligência Artificial",
+      description:
+        "Chatbots, automações e integrações de IA para tornar o seu negócio mais eficiente.",
     },
   ],
 };
