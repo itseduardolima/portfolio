@@ -2,121 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-inter);
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: theme("colors.line");
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Swiper custom styles */
-.swiper {
-  width: 100%;
-  padding: 30px 0;
+body {
+  background-color: #0c0e0f;
+  color: #ece9e2;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 768px) {
-  .swiper {
-    padding: 50px 0;
-  }
+::selection {
+  background-color: #ff6a1a;
+  color: #0c0e0f;
 }
 
-.swiper-slide {
-  opacity: 0.4;
-  transition: all 0.3s ease;
-  transform: scale(0.85);
-  border-radius: 0.75rem;
-  overflow: hidden;
+/* Keyboard focus — always visible, never suppressed */
+:focus-visible {
+  outline: 2px solid #ff6a1a;
+  outline-offset: 3px;
+  border-radius: 1px;
 }
 
-@media (min-width: 768px) {
-  .swiper-slide {
-    border-radius: 1.5rem;
-  }
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.swiper-slide-prev,
-.swiper-slide-next {
-  opacity: 0.7;
-  transform: scale(0.9);
-}
-
-.swiper-pagination {
-  position: relative;
-  margin-top: 20px;
-}
-
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-@media (min-width: 768px) {
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-.swiper-pagination-bullet-active {
-  background: #2dd4bf;
-  width: 24px;
-  border-radius: 5px;
-}
-
-@media (min-width: 768px) {
-  .swiper-pagination-bullet-active {
-    width: 30px;
-  }
-}
-
-/* Hide default navigation arrows */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
-
-/* Custom scrollbar for the page */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #0c0e0f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2dd4bf;
-  border-radius: 4px;
+  background: #33393d;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #14b8a6;
+  background: #ff6a1a;
 }
 
-@media (hover: none) {
-  .group:active .group-hover\:opacity-100 {
+/* Faint blueprint grid, used as a background layer behind hero content */
+.bp-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(236, 233, 226, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(236, 233, 226, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Reusable spec-sheet panel: hairline border + corner tick marks */
+.panel {
+  position: relative;
+  border: 1px solid rgba(236, 233, 226, 0.14);
+  background: #15181a;
+}
+
+.panel::before,
+.panel::after,
+.panel > .tick-tl,
+.panel > .tick-br {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+}
+
+.panel::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid #ff6a1a;
+  border-left: 1px solid #ff6a1a;
+}
+
+.panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid #ff6a1a;
+  border-right: 1px solid #ff6a1a;
+}
+
+.mono-caps {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
     opacity: 1;
+    box-shadow: 0 0 0 0 rgba(63, 224, 138, 0.5);
   }
-
-  .group:active .group-hover\:translate-y-0 {
-    transform: translateY(0);
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 0 4px rgba(63, 224, 138, 0);
   }
+}
 
-  .group:active .group-hover\:scale-105 {
-    transform: scale(1.05);
+.status-pulse {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot-amber {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(255, 106, 26, 0.5);
   }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 0 4px rgba(255, 106, 26, 0);
+  }
+}
 
-  .group:active .group-hover\:opacity-0 {
-    opacity: 0;
+.status-pulse-amber {
+  animation: pulse-dot-amber 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
