@@ -11,7 +11,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/eduardolima07/",
   linkedinHandle: "linkedin.com/in/eduardolima07",
   resumeUrl: "/assets/docs/eduardo-lima-castro-curriculo.pdf",
-  availability: "Disponível — freelance, híbrido ou remoto",
+  availability: "Disponível — freelance, remoto",
   legalName: "57.976.158 Eduardo Lima Castro",
   cnpj: "57.976.158/0001-19",
   summary:
