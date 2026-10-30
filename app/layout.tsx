@@ -1,24 +1,11 @@
 import type { Metadata } from "next";
-import { Big_Shoulders_Display, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/mock/profileData";
 
-const display = Big_Shoulders_Display({
+const sans = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-  variable: "--font-display",
-});
-
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-mono",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -128,7 +115,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${display.variable} ${body.variable} ${mono.variable} antialiased bg-graphite text-ink font-body`}
+        className={`${sans.variable} font-sans antialiased bg-plaster text-ink`}
       >
         <script
           type="application/ld+json"
